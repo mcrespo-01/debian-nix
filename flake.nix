@@ -1,5 +1,5 @@
 {
-  description = "My Fedora Nix";
+  description = "My Debian Nix";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
@@ -13,7 +13,7 @@
     home-manager,
     ...
   }: let
-    
+    # system = "aarch64-linux"; If you are running on ARM powered computer
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
   in {
@@ -27,3 +27,4 @@
     };
   };
 }
+
